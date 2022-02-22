@@ -42,12 +42,15 @@ add-zsh-hook precmd .prompt.git-status.async
 
 .promp.git-status.parse() {
   local -a lines=() symbols=() tmp=()
-  local REPLY= MATCH= MBEGIN= MEND= head= gitdir= push= upstream= ahead= behind=
+  local REPLY= MATCH= MBEGIN= MEND= head= gitdir= reporoot= push= upstream= ahead= behind=
   {
     gitdir="$( git rev-parse -q --git-dir 2> /dev/null )" ||
         return
 
-    REPLY="%F{12}${$( git rev-parse -q --show-toplevel ):t}%f"  # Add repo root dir
+    reporoot="$( git rev-parse -q --show-toplevel 2> /dev/null )" ||
+        return
+
+    REPLY="%F{12}${reporoot:t}%f"  # Add repo root dir
 
     if head=$( git branch --show-current 2> /dev/null ) && [[ -n $head ]]; then
       REPLY="%F{14}$head%f $REPLY"
