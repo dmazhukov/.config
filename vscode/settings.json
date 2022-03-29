@@ -1,98 +1,82 @@
 {
-	"editor.accessibilitySupport": "off",
-	"editor.autoClosingQuotes": "beforeWhitespace",
-	"editor.bracketPairColorization.enabled": true,
-	"editor.dragAndDrop": false,
-	"editor.emptySelectionClipboard": false,
-	"editor.fontFamily": "'SF Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-	"editor.inlineSuggest.enabled": true,
-	"editor.minimap.enabled": false,
-	"editor.renderControlCharacters": true,
-	"editor.renderLineHighlight": "all",
-	"editor.rulers": [ 80, 120 ],
-	"editor.scrollbar.horizontal": "visible",
-	"editor.semanticHighlighting.enabled": true,
-	"editor.suggestSelection": "first",
-	"editor.tabSize": 8,
-	"editor.wordSeparators": " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
-	"editor.wordWrapColumn": 120,
-	"explorer.confirmDelete": false,
-	"explorer.confirmDragAndDrop": false,
-	"explorer.openEditors.sortOrder": "alphabetical",
-	"extensions.ignoreRecommendations": true,
-	"files.associations": {
-		"_*": "shellscript",
-		"*.awk": "makefile",
-		"*.in": "makefile",
-		"*.mdd": "makefile",
-		"*.tcc": "c",
-		"*.ztst": "plaintext",
-		"Make*": "makefile",
-	},
-	"files.autoSave": "afterDelay",
-	"files.defaultLanguage": "shellscript",
-	"files.exclude": {
-		"**/.git": false,
-		"**/.hg": false,
-		"**/.svn": false,
-		"**/*.zwc": true,
-		"**/CVS": false,
-	},
-	"files.trimTrailingWhitespace": true,
-	"git.autofetch": true,
-	"git.confirmSync": false,
-	"githubIssues.queries": [
-		{
-			"label": "Open Issues",
-			"query": "state:open repo:${owner}/${repository} sort:created-desc"
-		}
-	],
-	"highlight.regexes": {
-		"(private)": [
-			{
-				"color": "#569CD6"
-			}
-		]
-	},
-	"java.autobuild.enabled": false,
-	"java.semanticHighlighting.enabled": true,
-	"reflowMarkdown.doubleSpaceBetweenSentences": true,
-	"reflowMarkdown.preferredLineLength": 99,
-	"scm.inputFontFamily": "editor",
-	"scm.inputFontSize": 11,
-	"search.exclude": {
-		"**/.git/objects/**": true,
-		"**/.git/subtree-cache/**": true,
-		"**/build/**": true
-	},
-	"search.sortOrder": "fileNames",
-	"search.useIgnoreFiles": false,
-	"search.useReplacePreview": false,
-	"shebang.associations": [
-		{
-			"pattern": "^#!/bin/*$",
-			"language": "shellscript"
-		},
-		{
-			"pattern": "^#autoload$",
-			"language": "shellscript"
-		},
-		{
-			"pattern": "^#compdef *$",
-			"language": "shellscript"
-		},
-	],
-	"shell-syntax.defaultShell": "zsh",
-	"terminal.external.linuxExec": "konsole",
-	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-	"workbench.colorTheme": "Monokai",
-	"workbench.editor.enablePreview": false,
-	"workbench.editor.limit.enabled": true,
-	"workbench.editor.showTabs": false,
-	"workbench.editor.untitled.hint": "hidden",
-	"workbench.fontAliasing": "antialiased",
-	"workbench.list.keyboardNavigation": "filter",
-	"workbench.startupEditor": "none",
-	"workbench.tree.indent": 16,
-	"diffEditor.renderSideBySide": false,
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.dragAndDrop": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "'SF Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 14,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.rulers": [80, 120],
+  "editor.scrollbar.horizontal": "visible",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 8,
+  "editor.wordSeparators": " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
+  "editor.wordWrapColumn": 120,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.awk": "makefile",
+    "*.in": "makefile",
+    "*.mdd": "makefile",
+    "*.tcc": "c",
+    "*.ztst": "plaintext",
+    "Make*": "makefile"
+  },
+  "files.defaultLanguage": "shellscript",
+  "files.exclude": {
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/*.zwc": true,
+    "**/CVS": false
+  },
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "githubIssues.queries": [
+    {
+      "label": "Open Issues",
+      "query": "state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ],
+  "highlight.regexes": { "(private)": [{ "color": "#569CD6" }] },
+  "java.autobuild.enabled": false,
+  "java.semanticHighlighting.enabled": true,
+  "reflowMarkdown.doubleSpaceBetweenSentences": true,
+  "reflowMarkdown.preferredLineLength": 99,
+  "scm.inputFontFamily": "editor",
+  "search.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/build/**": true,
+    "**/node_modules": false
+  },
+  "search.useIgnoreFiles": false,
+  "search.useReplacePreview": false,
+  "shebang.associations": [
+    { "pattern": "^#!/bin/*$", "language": "shellscript" },
+    { "pattern": "^#autoload$", "language": "shellscript" },
+    { "pattern": "^#compdef *$", "language": "shellscript" }
+  ],
+  "shell-syntax.defaultShell": "zsh",
+  "terminal.external.linuxExec": "konsole",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Monokai",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.list.keyboardNavigation": "filter",
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 16,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
 }
