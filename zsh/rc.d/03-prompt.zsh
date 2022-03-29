@@ -81,9 +81,9 @@ add-zsh-hook precmd .prompt.git-status.async
         REPLY="%F{13}$upstream%b%f$REPLY"
       fi
     elif head="$( git branch -q --no-color --points-at=@ 2> /dev/null )"; then
-      REPLY="%F{1}${${head##*\((no branch, |)}%\)*}@$REPLY"
+      REPLY="%F{1}${${head##*\((no branch, |)}%\)*}%f $REPLY"
     else
-      REPLY="%F{14}${"$( < $gitdir/HEAD )":t}%f@$REPLY"
+      REPLY="%F{14}${"$( < $gitdir/HEAD )":t}%f $REPLY"
     fi
 
 
