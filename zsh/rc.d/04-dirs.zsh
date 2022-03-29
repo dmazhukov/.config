@@ -22,3 +22,35 @@ if [[ -n $func ]]; then
   $func                         # ...and once for our initial dir.
 fi
 unset func
+
+
+# Map ~[] to the current Git repo's root dir.
+add-zsh-hook zsh_directory_name .dirname
+
+.dirname() {
+  .dirname.$1 "$2"
+}
+
+# Complete ~[ to ~[], but display it as an absolute path.
+.dirname.c() {
+  local -a disp=() expl=()
+  private tag=named-directories
+  _tags $tag
+
+  _tags &&
+          _requested $tag expl 'named directory' &&
+          disp=( "$( git rev-parse --show-toplevel 2> /dev/null )" ) &&
+          [[ $disp != $PWD ]] &&
+      compadd "$expl[@]" -I ']' -Q -d disp - ''
+}
+
+# Don't abbreviate the repo root dir when displaying it.
+.dirname.d() {
+  false
+}
+
+# Resolve ~[] to the current Git repo's root dir.
+.dirname.n() {
+  [[ -z $1 ]] &&
+      reply=( "$( git rev-parse --show-toplevel 2> /dev/null )" )
+}
