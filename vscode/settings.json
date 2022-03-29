@@ -5,7 +5,6 @@
 	"editor.dragAndDrop": false,
 	"editor.emptySelectionClipboard": false,
 	"editor.fontFamily": "'SF Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-	"editor.guides.indentation": false,
 	"editor.inlineSuggest.enabled": true,
 	"editor.minimap.enabled": false,
 	"editor.renderControlCharacters": true,
@@ -94,5 +93,6 @@
 	"workbench.fontAliasing": "antialiased",
 	"workbench.list.keyboardNavigation": "filter",
 	"workbench.startupEditor": "none",
+	"workbench.tree.indent": 16,
 	"diffEditor.renderSideBySide": false,
 }
