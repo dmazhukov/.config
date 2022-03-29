@@ -26,6 +26,12 @@ else
   }
 fi
 
+if [[ $VENDOR != apple ]]; then
+  open() {
+    nautilus $@ &> /dev/null &|
+  }
+fi
+
 # Pattern matching support for `cp`, `ln` and `mv`
 # See http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#index-zmv
 # Tip: Use -n for no execution. (Print what would happen, but don’t do it.)
