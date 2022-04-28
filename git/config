@@ -1,13 +1,13 @@
 [user]
-	name = Marlon Richert
-	email = marlonrichert@users.noreply.github.com
+	name = Dmitry Zhukov
+	email = dmitry0983@gmail.com
 [feature]
 	manyFiles = true
 	writeCommitGraph = true
 [core]
 	autocrlf = false
 	editor = code --wait
-	hooksPath = /Users/marlon/.config/git/hooks
+	hooksPath = /Users/d/.config/git/hooks
 [column]
 	ui = row dense
 [checkout]
